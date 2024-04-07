@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>LOST AND FOUND</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous">
+    </head>
+
+    <body>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <style>
+        .nm {
+            font-style: italic;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .quote {
+            font-size: 25px; font-weight: bolder;
+            font-style: italic;
+            color: rgb(231, 97, 97);
+            /* background-color: rgb(123, 66, 153); */
+            text-shadow: 3px 3px 3px rgb(1, 0, 0);
+            letter-spacing: 5px;
+            position: absolute;
+            top: 90%;
+            right: 30%;
+            left: 33%;
+        }
+
+        input[type="submit"] {
+            height: 38px;
+            width: 190px;
+           font-size: large;
+           font-style: italic;
+           font-weight: 600;
+            background-color: rgba(232, 108, 108,0.9);
+            border-radius: 10px; 
+           border: 2px solid rgb(0, 0, 0);
+            margin-top: 2%;
+            margin-left: 14%;
+
+        }
+        input[type="submit"]:hover{
+            background-color: aqua;
+        }
+
+        .para {
+            width: 83%;
+            height: 40%;
+            position: absolute;
+            left: 10%;
+            padding-left: 1%;
+            padding-bottom: 1%;
+            color: rgb(255, 255, 255);
+            border: 2px solid rgb(0, 0, 0);
+            letter-spacing: 1px;
+            background-color: rgb(69, 99, 79);
+        }
+
+        body {
+            /* background-color: rgb(69, 99, 79); */
+            font-style: italic;
+        }
+
+        .car {
+            border: 1px solid rgb(255, 255, 255);
+        }
+        .head-1{
+            color: yellow;
+             text-shadow: 3px 3px 3px rgb(1, 0, 0);
+        }
+
+        .foter {
+            position: absolute;
+            top: 190%;
+            width: 100%; }
+       
+        .containerf1 {
+            position: absolute;
+            left: 10%;
+            top: 10%;
+        }
+
+        .containerf3 {
+            position: absolute;
+            right: 10%;
+            top: 10%;
+        }
+
+        a {
+            color: azure;
+            font-style: italic;
+            font-weight: bold;
+        } a:hover{color: yellow; font-size: large;}
+        .a1{
+            border: 1px solid black;
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 11%; font-size: small; font-weight: bolder; 
+            height: 30px;
+            background-color: rgb(253, 253, 253);
+            letter-spacing: 3px;
+        }
+        img{
+            margin-left: 2px;
+        }
+        .btns{
+            margin-left: 5%;
+        }
+
+        /* FOOTER */
+
+        .footer {
+  position: relative;
+  width: 100%;
+  left:0%;
+  right:0%;
+  margin-top:30%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+    </style>
+
+        <div>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <img src="img/logo.png" width="45px">
+                <div class="container-fluid">
+                    <div class="nm">LOST AND FOUND</div>
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="btns" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="login.html"><b>Login</b></a>
+                            </li>
+
+                           
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="feedback.html"><b>Feedback</b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="contact.html"><b>Contact Us</b></a>
+                            </li>
+
+                        </ul>
+                        <!-- <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form> -->
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="a1">
+            <fieldset>
+                <marquee>
+                    
+                    WELCOME TO THE LOST AND FOUND WEBSITE. WE ALL HERE TO HELP
+                    YOU.
+                </marquee>
+            </fieldset>
+        </div>
+        
+        <br>
+       
+        <div class="car">
+            <div id="carouselExampleAutoplaying" class="carousel slide"
+                data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2500">
+                        <img src=" img/a6.jpg" height="400px"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2500">
+                        <img src="img/img1.jpg" height="400px"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2500">
+                        <img src="img/a8.jpg" height="400px"
+                            class="d-block w-100" alt="...">
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button"
+                    data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button"
+                    data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+
+                </button>
+
+            </div>
+
+        </div>
+        <div class="quote">
+            
+            <center> <b>Search. Find. Ship.</b></center>
+        </div>
+
+       <br><br><br><br><br>
+        <div class="bt">
+            <a href="html/Lost_Info.html"><input type="submit" value="LOST ITEM"></a>
+           <a href="html/recent_posts.jsp"> <input type="submit" value="VIEW RECENT POSTS"></a>
+           <a href="html/Found_Info.html"> <input type="submit" value="FOUND ITEM"></a>
+        </div>
+        <br><br><br><br><br>
+        <div class="para">
+            <b><br>
+                <div class="head-1">
+                    <center> WHAT ARE WE ACTUALLY DO? </center>
+                </div>
+               
+            </b> <br>
+            <b>
+                <p>This is online web application to help all the people's who
+                    may
+                    lose their commodity inside the institution premises, to
+                    login and search for them online,
+                    and legally claim them if they find it. The system is
+                    authentic and has the ability to record
+                    information of each user and its activity on this portal,
+                    and keeps a record of all lost and
+                    claimed items in its database. The admin panel of this
+                    software manages all the records of
+                    data which is operated by an appointed in charge.
+                </p>
+            </b>
+        </div>
+        <br><br>
+        <footer class="footer">
+            <div class="waves">
+              <div class="wave" id="wave1"></div>
+              <div class="wave" id="wave2"></div>
+              <div class="wave" id="wave3"></div>
+              <div class="wave" id="wave4"></div>
+            </div>
+            <ul class="social-icon">
+              <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+              <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+              <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+              <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+            </ul>
+            <ul class="menu">
+              <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+              <li class="menu__item"><a class="menu__link" href="about.html">About</a></li>
+              <li class="menu__item"><a class="menu__link" href="index.html">Services</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+              <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+        
+            </ul>
+            <p> © 2023 Lost-n-Found Technologies:</p>
+          </footer>
+        <!-- <div class="foter">
+
+                <footer class="bg-dark text-center text-white">
+                <div class="containerf1">
+
+                    <section class="mb-3">
+                        <a href="#">Instagram</a><br>
+                        <a href="#">Facebook</a> <br>
+                    </section>
+                </div>
+                <div class="containerf2">
+                    <section class="mb-4">
+                        <a href="#">LOST AND FOUND</a><br>
+                        <a href="about.html">About us</a> <br>
+                        <a href="contact.html">Contact us</a>
+                    </section>
+                </div>
+                <div class="containerf3">
+
+                    <section class="mb-3">
+                        <a href="#">Twitter</a><br>
+                        <a href="#">YouTube</a> <br>
+                    </section>
+                </div>
+                <div class="text-center p-3"
+                    style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2023 Jivmit Technologies:
+                    <a class="text-white" href="#">LostandFound.com</a>
+                </div> 
+
+            </footer> -->
+
+        </div>
+    </body>
+
+</html>

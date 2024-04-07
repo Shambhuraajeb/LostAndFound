@@ -1,0 +1,348 @@
+
+<html>
+
+<head>
+	<nav>
+		<a href="#" class="user">| USER LOGIN</a>
+	</nav>
+	<div id="navbar">
+		<img src="trans.png" class="logo "></img>
+		<a href="Lost_Info.html">SUBMIT LOST ITEM</a>
+		<a href="Found_Info.html">SUBMIT FOUND ITEM</a>
+		<a href="recent_posts.jsp">RECENT POSTS</a>
+	</div>
+
+	<style>
+		body {
+			background-size: cover;
+			background-color: #eee;
+		}
+
+		nav {
+			width: 100%;
+			left: 0%;
+			top: 0%;
+			overflow: hidden;
+			position: absolute;
+			height: 7%;
+			background: linear-gradient(#00a900, #008900);
+		}
+
+
+		.user {
+			color: white;
+			font-family: 'Roboto', sans-serif;
+			font-size: 13px;
+			position: absolute;
+			text-decoration: none;
+			right: 9%;
+			top: 30%;
+
+		}
+
+		.user:hover {
+			border-bottom: 2px solid #fc0;
+		}
+
+		#navbar {
+			position: absolute;
+			top: 7%;
+			left: 0%;
+			height: 15%;
+			width: 100%;
+			overflow: hidden;
+			background-color: #fff;
+			height: 15%;
+			border-bottom: 1px solid blue;
+		}
+
+		#navbar a {
+			float: right;
+			margin-top: 25px;
+			left: 20%;
+			display: block;
+			margin-right: 25px;
+			color: #333333;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 12px;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		#navbar a:hover {
+			color: rgb(121, 106, 198);
+
+		}
+
+
+
+		.form-inline {
+			display: flex;
+			margin-top: 30px;
+			position: absolute;
+			overflow: auto;
+			left: 10%;
+			top: 25%;
+			width: 80%;
+			border-radius: 2px;
+			height: 100%;
+			background-color: #fff;
+			flex-flow: row wrap;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+
+		p {
+			font-size: 12pt;
+			color: black;
+		}
+
+		canvas {
+			height: 175px;
+			border-style: solid;
+			border-width: 1px;
+			border-color: black;
+		}
+
+		input {
+			font-family: verdana;
+			font-size: 12pt;
+		}
+
+		.content-left {
+			padding-top: 60px;
+			padding-left: 40px;
+		}
+
+		.content-left label {
+			font-size: 24px;
+			font-weight: 500;
+			margin: 5px 0;
+			width: 100%;
+			color: #3f3f3f !important;
+			letter-spacing: 1px;
+		}
+
+		.content-left sub {
+			font-size: 13px;
+			color: #000000;
+			font-weight: 300;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		.content-left input,
+		select {
+			width: 90%;
+			display: block;
+			height: 50px;
+			padding: 0.375rem 0.75rem;
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.5;
+			color: #212529;
+
+			background-color: #fff;
+			background-clip: padding-box;
+			border: 1px solid #ced4da;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			border-radius: 0.25rem;
+			transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+		}
+
+
+		.content-right {
+			padding-top: 60px;
+			padding-left: 40px;
+		}
+
+		.content-right label {
+			font-size: 24px;
+			font-weight: 500;
+			margin: 5px 0;
+			width: 100%;
+			color: #3f3f3f !important;
+			letter-spacing: 1px;
+		}
+
+		.content-right sub {
+			font-size: 13px;
+			color: #000000;
+			font-weight: 300;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		.logo {
+			width: 75px;
+			padding-top: 10px;
+			padding-left: 10px;
+		}
+
+		.content-right input {
+			width: 110%;
+			display: block;
+			height: 50px;
+			padding: 0.375rem 0.75rem;
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.5;
+			color: #212529;
+
+			background-color: #fff;
+			background-clip: padding-box;
+			border: 1px solid #ced4da;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			border-radius: 0.25rem;
+			transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+		}
+
+		h1 {
+			font-size: 24px;
+			padding-top: 80px;
+
+			font-weight: 500;
+			margin: 5px 0;
+			width: 100%;
+			color: #3f3f3f !important;
+			letter-spacing: 1px;
+		}
+
+		h2 {
+			font-size: 24px;
+			padding-top: 20px;
+
+			font-weight: 500;
+			margin: 5px 0;
+			width: 100%;
+			color: #3f3f3f !important;
+			letter-spacing: 1px;
+		}
+
+		.content-left input[type="submit"] {
+			width: 50%;
+			height: 3%;
+			font-size: 20px;
+			margin-left: 67%;
+			color: white;
+			background-color: #0096FF;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #088F8F;
+		}
+	</style>
+</head>
+
+<body>
+	<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">
+		function upload() {
+			var imgcanvas = document.getElementById("canv1");
+			var fileinput = document.getElementById("finput");
+			var image = new SimpleImage(fileinput);
+			image.drawTo(imgcanvas);
+		}
+	</script>
+
+	<form class="form-inline" action="http://localhost:8082/FoundFound/Found" method="post">
+		<div class="content-left">
+			<label for="what">What was Found*</label><br>
+			<sub>(Dog, Jacket, Smartphone, Wallet, etc.) This field may auto-populate</sub><br><br>
+			<input type="text" id="email" placeholder="What was Found" name="what_Found"><br><br>
+			
+			<label for="category">Category*</label><br>
+			<sub>(Animals/Pets, Clothing, Electronics, Personal Accessories etc.) This field is required.</sub><br><br>
+			<input type="text" placeholder="Search Category" name="category"><br><br>
+			
+			<label for="brand">Brand</label><br>
+			<sub>(Ralph Lauren, Samsung, KitchenAid, etc.)</sub><br><br>
+			<input type="text" placeholder="Search Brand" name="brand"><br><br>
+			
+			<label for="primary color">Primary Color</label><br>
+			<sub>Please add the color that best represents the Found property (Black, Red, Blue, etc.)</sub><br><br>
+			<input type="text" placeholder="Search Primary Color" name="p_color"><br><br>
+			
+			<label for="secondary color">Secondary Color</label><br>
+			<sub>Please add a color that acts as a less dominant (Leave blank if not applicable.)</sub><br><br>
+			<input type="text" placeholder="Search Secondary Color" name="s_color"><br><br>
+
+
+			<h1 for="location-head">LOCATION INFORMATION</h1><br><br><br>
+			<label for="w-Found">Where Found*</label><br>
+			<sub>Please provide an approximate location of the Found property (Bar, Restaurant, Park, etc.)</sub><br><br>
+			<select class="option-btn" name="option" required>
+				<option value="0">Select</option>
+				<option value="1">Bar</option>
+				<option value="2">Taxi</option>
+				<option value="3">Restaurant</option>
+				<option value="4">Hotel</option>
+				<option value="5">Airport</option>
+				<option value="6">Airport of depature</option>
+				<option value="7">Airport Arrival</option>
+				<option value="8">TSA checkpoint</option>
+				<option value="9">Airport Shuffle</option>
+				<option value="10">Pest services</option>
+				<option value="11">Educational institute</option>
+				<option value="12">Shopping center</option>
+				<option value="13">Public transportation</option>
+				<option value="14">Museum</option>
+				<option value="15">Park</option>
+				<option value="16">Rental car</option>
+				<option value="17">Venu</option>
+			</select><br><br>
+			
+			<label for="zip-code">Zip Code</label><br>
+			<sub>Please provide your zip code(10004, 10028, 10002, etc.) This field may auto-populate.</sub><br><br>
+			<input type="text" placeholder="Zip Code" name="z_code"><br><br>
+			
+			<h2 for="contact-head">CONTACT INFORMATION</h2><br><br><br>
+			<label for="f-name">First Name*</label><br>
+			<sub>Please enter your first name(This will appear on your submission)</sub><br><br>
+			<input type="text" placeholder="First Name" name="f_name"><br><br>
+			
+			<label for="p-no">Phone Number*</label><br>
+			<sub>Please enter the phone number to display on your submission</sub><br><br>
+			<input type="text" placeholder="Phone Number" name="p_no"><br><br>
+			
+			<input type="submit" value="Submit">
+		</div>
+
+		<div class="content-right">
+			<label for="date">Secondary Date Found*</label><br>
+			<sub>Please add the approximate date of when the item was Found.</sub><br><br>
+			<input type="date" placeholder="dd/mm/yy" name="fdate"><br><br>
+			
+			<label for="time-Found">Time Found*</label><br>
+			<sub>Please add the approximate time of day the item was Found.</sub><br><br>
+			<input type="time" placeholder="12:12:12" name="sdate"><br><br>
+			
+			<label for="u-img">Upload Image</label><br>
+			<sub>(This image will display on the Website.)</sub><br><br>
+			<canvas id="canv1"></canvas><br><br>
+
+			<input type="file" multiple="false" accept="image/*" id=finput onchange="upload()" name="image"><br><br>
+
+			<label for="A-info">Additional Information</label><br>
+			<sub>Please provide any additional details/description of your Found property.</sub><br><br>
+			<input type="text" placeholder="Additional Information"
+				name="a_info"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+			<label for="l-name">Last Name*</label><br>
+			<sub>Please enter your last name(This will appear on your submission)</sub><br><br>
+			<input type="text" placeholder="Last Name" name="l_name"><br><br>
+			
+			<label for="e-name">Email*</label><br>
+			<sub>Please enter your email(This will appear on your submission)</sub><br><br>
+			<input type="email" placeholder="Email" name="email"><br><br><br><br><br>
+
+		</div>
+
+	</form>
+
+
+</body>
+
+</html>

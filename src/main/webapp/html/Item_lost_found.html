@@ -1,0 +1,243 @@
+<html>
+
+<head>
+	<nav>
+		<a href="#" class="user">| USER LOGIN</a>
+	</nav>
+	<div class="head-bar">
+		<img src="trans.png" class="logo "></img>
+		<div class="nav-grp">
+			<a href="Lost_Info.html" class="sub1">SUBMIT LOST ITEM</a>
+			<a href="Lost_Info.html" class="sub1">SUBMIT FOUND ITEM</a>
+			<a href="recent_posts.html" class="sub1">VIEW RECENT POSTS</a>
+		</div>
+	</div>
+
+	<style>
+		body {
+			background-size: cover;
+
+		}
+
+		nav {
+			width: 100%;
+			height: 7%;
+			background-color: #366f98;
+
+		}
+
+		.user {
+			color: white;
+			font-family: 'Roboto', sans-serif;
+			font-size: 13px;
+			position: absolute;
+			text-decoration: none;
+			right: 9%;
+			top: 4%;
+
+		}
+
+		.logo {
+			width: 75px;
+			padding-top: 10px;
+			padding-left: 10px;
+		}
+
+		.nav-grp {
+			position: absolute;
+			top: 15%;
+			right: 10%;
+		}
+
+		.sub1 {
+			color: #333333;
+			text-decoration: none;
+			font-size: 12px;
+			padding-left: 25px;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		.img2 {
+			width: 99%;
+			height: 100%;
+			position: absolute;
+			top: 22%;
+			border-top: 1px solid blue;
+		}
+
+		.form-container {
+			width: 600px;
+			position: absolute;
+			top: 28%;
+			left: 2%;
+			height: 600px;
+			border-radius: 2px;
+			box-shadow: 8px 6px 3px 8px white;
+			background-color: #fff;
+		}
+
+		.head {
+			font-size: 39px;
+			color: #333333;
+			font-weight: 200;
+			line-height: 46px;
+			margin: 0 0 0px;
+			padding-left: 40px;
+			font-family: inherit;
+			font-family: HelveticaLight;
+			padding-top: 35px;
+			text-shadow: 2px 2px 4px #000000;
+		}
+
+		.head2 {
+			font-size: 25px;
+			font-family: inherit;
+			font-family: HelveticaLight;
+			font-weight: 500;
+			line-height: 1.1;
+			color: inherit;
+			padding-left: 45px;
+		}
+
+		.p1 {
+			font-size: 13px;
+			margin-bottom: 20px;
+			color: #000000;
+			font-weight: 300;
+			font-family: 'Roboto', sans-serif;
+			position: absolute;
+			left: 8%;
+		}
+
+		.label {
+			font-size: 24px;
+			font-weight: 500;
+			margin: 5px 0;
+			width: 100%;
+			color: #3f3f3f !important;
+			padding-left: 45px;
+			text-shadow: 0 0 1px #3f3f3f;
+		}
+
+
+		.text {
+			width: 85%;
+			display: block;
+			height: 50px;
+			position: absolute;
+			left: 8%;
+			padding: 0.375rem 0.75rem;
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.5;
+			color: #212529;
+
+			background-color: #fff;
+			background-clip: padding-box;
+			border: 1px solid #ced4da;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			border-radius: 0.25rem;
+			transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+		}
+
+		.option-btn {
+			width: 85%;
+			display: block;
+			height: 50px;
+			position: absolute;
+			left: 8%;
+			padding: 0.375rem 0.75rem;
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.5;
+			color: #212529;
+
+			background-color: #fff;
+			background-clip: padding-box;
+			border: 1px solid #ced4da;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			border-radius: 0.25rem;
+			transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+		}
+
+		.button-grp {
+			padding-top: 60px;
+			padding-left: 49px;
+
+		}
+
+		.btn1 {
+			width: 200px;
+			height: 47px;
+			background-color: #366f98;
+			border: none;
+			font-size: 15px;
+			color: white;
+		}
+
+		.btn2 {
+			width: 200px;
+			height: 47px;
+			color: #366f98;
+			background: #fff;
+			border: 1px solid #366f98;
+			font-size: 15px;
+			margin-left: 18px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<img src="formbg3.jpg" class="img2"></img>
+	<form method="post" action="http://localhost:8082/LostFound/Access">
+		<div class="form-container">
+			<h1 class="head">Online Lost and Found,</h1>
+			<h3 class="head2">Locate lost and Found items!</h3>
+			<sub class="p1">Our Online Lost & Found can Help you Find what you are Looking For!</sub><br><br><br>
+			<label class="label">What was Lost or Found *</label><br>
+			<sub class="p1">(Dog, Jacket, Smartphone, Wallet, etc.) This field may auto-populate</sub><br><br>
+			<input type="text" class="text" placeholder="Item Lost" name="itemlost" required><br><br><br><br><br>
+			<label class="label">Where Lost or Found *</label><br>
+			<sub class="p1">Please provide an approximate location of the lost property (Bar, Restaurant, Park,
+				etc.)</sub><br><br>
+			<div class="custom-select" style="width:400px;">
+				<select class="option-btn" name="location" required>
+					<option value="0">Select</option>
+					<option value="1">Bar</option>
+					<option value="2">Taxi</option>
+					<option value="3">Restaurant</option>
+					<option value="4">Hotel</option>
+					<option value="5">Airport</option>
+					<option value="6">Airport of depature</option>
+					<option value="7">Airport Arrival</option>
+					<option value="8">TSA checkpoint</option>
+					<option value="9">Airport Shuffle</option>
+					<option value="10">Pest services</option>
+					<option value="11">Educational institute</option>
+					<option value="12">Shopping center</option>
+					<option value="13">Public transportation</option>
+					<option value="14">Museum</option>
+					<option value="15">Park</option>
+					<option value="16">Rental car</option>
+					<option value="17">Venu</option>
+				</select><br><br>
+			</div>
+
+			<div class="button-grp">
+				<input type="submit" name="button" class="btn1" value="Submit Lost Item">
+				<input type="submit" name="button" class="btn2" value="Submit Found Item">
+			</div>
+
+		</div>
+
+
+	</form>
+
+</body>
+
+</html>
